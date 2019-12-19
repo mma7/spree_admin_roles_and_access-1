@@ -3,7 +3,7 @@
 <div class=" scrollable-list-group-item">
   <div class="card ">
     <div class="card-header">
-      <h3 class="card-header"><%= title %><span class="tag tag-pill float-xs-right count"><%= selected_count %>/<%= available_count %></span></h3>
+      <h3><%= title %><span class="tag tag-pill float-xs-right count"><%= selected_count %>/<%= available_count %></span></h3>
     </div>
     <ul class="list-group">
       <% items.each do |item| %>
@@ -11,7 +11,7 @@
           <%= label_tag do %>
             <%= check_box_tag field, item.id, is_checked.call(item), class: 'd-none' %>
             <p><strong><%= item.name %></strong></p>
-            <p><%= item.description %></p>
+            <p class='font-weight-bold'><%= item.description %></p>
           <% end %>
         </li>
       <% end %>
