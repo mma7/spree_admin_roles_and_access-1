@@ -33,7 +33,7 @@ var SearchableList = (function() {
       var total        = lg.find('.list-group-item').length;
       var totalChecked = lg.find('input:checked').length;
       lgItem.toggleClass('list-group-item-success');
-      checkbox.parents('.card').find('.count').text(totalChecked + '/' + total);
+      checkbox.parents('.card').find('.count').text(' ' + totalChecked + '/' + total);
     });
   };
 

@@ -3,7 +3,7 @@
 <div class="scrollable-list-group-item">
   <div class="card ">
     <div class="card-header">
-      <h3><%= title %><span class="tag tag-pill float-xs-right count"><%= selected_count %>/<%= available_count %></span></h3>
+      <h4><%= title %><b class="tag tag-pill float-xs-right count"><%= " #{selected_count}/#{available_count}" %></b></h4>
     </div>
     <ul class="list-group">
       <% items.each do |item| %>
