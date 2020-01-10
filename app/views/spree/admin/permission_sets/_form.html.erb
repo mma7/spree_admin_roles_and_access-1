@@ -1,23 +1,23 @@
 <div class="alert alert-info"><%= Spree.t(:permission_set_admin_permission_required) %></div>
 
 <div data-hook="admin_permission_set_form_fields">
-  <div class="inline-input-row col-xs-12">
+  <div class="form-inline inline-input-row col-xs-12">
     <%= f.field_container :name, class: ['form-group input-group input-group-md'] do %>
       <%= f.label :name, Spree.t(:permission_set_name), class: 'sr-only' %><span class="required"></span>
       <%= f.text_field :name, class: 'form-control full-width-input', placeholder: 'Name of the permission set' %>
-      <%= f.error_message_on :name, class: 'help-block' %>
+      <%= f.error_message_on :name, class: 'form-text text-muted' %>
     <% end %>
     <%= f.field_container :description, class: ['form-group input-group input-group-md'] do %>
       <%= f.label :description, Spree.t(:permission_set_description), class: 'sr-only' %>
       <%= f.text_field :description, class: 'form-control full-width-input', placeholder: 'This permission set allows the role to...' %>
-      <%= f.error_message_on :description, class: 'help-block' %>
+      <%= f.error_message_on :description, class: 'form-text text-muted' %>
     <% end %>
   </div>
 
   <%= f.field_container :display_permission, class: ['form-group'] do %>
-    <%= f.label :display_permission, Spree.t(:permission_set_display_permission) %>
-    <%= f.check_box :display_permission %>
-    <p class="help-block"><%= Spree.t(:permission_set_display_permission_help) %></p>
+    <%= f.label :display_permission, Spree.t(:permission_set_display_permission), class: 'form-check-label font-weight-bold' %>
+    <%= f.check_box :display_permission, class: 'form-check-input' %>
+    <p class="form-text text-muted"><%= Spree.t(:permission_set_display_permission_help) %></p>
     <%= f.error_message_on :display_permission %>
   <% end %>
 

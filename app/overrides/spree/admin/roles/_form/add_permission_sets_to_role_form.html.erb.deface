@@ -1,22 +1,22 @@
 <!-- insert_bottom "[data-hook='additional_role_fields']" -->
 
 <%= f.field_container :is_default, class: ['form-group'] do %>
-  <%= f.label :is_default, Spree.t(:is_default) %>
+  <%= f.label :is_default, Spree.t(:is_default), class: 'font-weight-bold' %>
   <%= f.check_box :is_default %>
-  <p class="help-block"><%= Spree.t(:role_is_default_help) %></p>
+  <p class="form-text text-muted"><%= Spree.t(:role_is_default_help) %></p>
   <%= f.error_message_on :is_default, class: 'error-message' %>
 <% end %>
 
 <%= f.field_container :admin_accessible, class: ['form-group'] do %>
-  <%= f.label :admin_accessible, Spree.t(:admin_accessible) %>
+  <%= f.label :admin_accessible, Spree.t(:admin_accessible), class: 'font-weight-bold' %>
   <%= f.check_box :admin_accessible %>
-  <p class="help-block"><%= Spree.t(:role_admin_accessible_help) %></p>
+  <p class="form-text text-muted"><%= Spree.t(:role_admin_accessible_help) %></p>
   <%= f.error_message_on :admin_accessible, class: 'error-message' %>
 <% end %>
 
-<%= f.field_container :permission_sets, class: ['form-group input-group col-xs-12'] do %>
+<%= f.field_container :permission_sets, class: ['form-group col-xs-12'] do %>
   <%= hidden_field_tag 'role[permission_set_ids][]', [] %>
-  <div data-hook="admin_role_form_permission_sets" class="form-group">
+  <div data-hook="admin_role_form_permission_sets">
     <%- @role.permission_sets.to_a %>
     <div class="searchable-scrollable-list">
       <% @permission_sets.group_by { |permission_set| permission_set.display_permission? ? 'Display Permission' : 'Management Permission' }.each do |title, permission_sets| %>

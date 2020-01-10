@@ -1,7 +1,7 @@
-<div class="panel-group" id="permission-writing-guide">
-  <div class="panel panel-info">
-    <div class="panel-heading" role="button" data-toggle="collapse" data-target="#permission-list-guide">
-      <h3 class="panel-title">Pattern of the permissions <i class="icon icon-circle-arrow-right"></i></h3>
+<div id="permission-writing-guide">
+  <div class="card card-info">
+    <div class="card-header" role="button" data-toggle="collapse" data-target="#permission-list-guide">
+      <h3>Pattern of the permissions <i class="icon icon-circle-arrow-right"></i></h3>
     </div>
 
     <ul class="list-group collapse" id="permission-list-guide">
@@ -12,9 +12,9 @@
     </ul>
   </div>
 
-  <div class="panel panel-info">
-    <div class="panel-heading" role="button" data-toggle="collapse" data-target="#permission-example">
-      <h3 class="panel-title">Some examples of permissions <i class="icon icon-circle-arrow-right"></i></h3>
+  <div class="card card-info">
+    <div class="card-header" role="button" data-toggle="collapse" data-target="#permission-example">
+      <h3> Some examples of permissions <i class="icon icon-circle-arrow-right"></i></h3>
     </div>
 
     <ul class="list-group collapse" id="permission-example">
@@ -29,24 +29,24 @@
 
 <div data-hook="admin_permission_form_fields">
   <div data-hook="permission_title" class="form-group">
-    <%= f.label :title, Spree.t(:permission_title) %> <span class="required">*</span>
+    <%= f.label :title, Spree.t(:permission_title), class: "font-weight-bold" %> <span class="required">*</span>
     <%= f.text_field :title, class: 'form-control' %>
-    <a href="#permission-writing-guide" class="help-block">help</a>
+    <a href="#permission-writing-guide" class="form-text">help</a>
   </div>
   <div data-hook="permission_description" class="form-group">
-    <%= f.label :description, Spree.t(:permission_description) %>
+    <%= f.label :description, Spree.t(:permission_description), class: "font-weight-bold" %>
     <%= f.text_field :description, class: 'form-control', placeholder: 'This allows the permitted user to..' %>
   </div>
   <div data-hook="permission_priority" class="form-group">
-    <%= f.label :priority, Spree.t(:permission_priority) %> <span class="required">*</span>
+    <%= f.label :priority, Spree.t(:permission_priority), class: "font-weight-bold" %> <span class="required">*</span>
     <%= f.number_field :priority, in: 0..9, step: 1, class: 'form-control' %>
-    <p class="help-block"><%= Spree.t(:permission_priority_help) %></p>
+    <p class="form-text text-muted"><%= Spree.t(:permission_priority_help) %></p>
   </div>
   <div data-hook="permission_visible" class="checkbox">
-    <label>
+    <label class="font-weight-bold">
       <%= f.check_box :visible, value: true %><%= Spree.t(:permission_visible) %>
-      <p class="help-block"><%= Spree.t(:permission_visible_help) %></p>
     </label>
+    <p class="form-text text-muted"><%= Spree.t(:permission_visible_help) %></p>
   </div>
 
   <div data-hook="additional_permission_fields"></div>

@@ -33,7 +33,7 @@
     padding: 0;
 }
 
-.scrollable-list-group-item > .panel > .list-group {
+.scrollable-list-group-item > .card > .list-group {
     max-height: 400px;
     overflow-y: scroll;
 }
@@ -42,7 +42,7 @@
     text-transform: none;
 }
 
-.scrollable-list-group-item > .panel > .list-group > .list-group-item {
+.scrollable-list-group-item > .card > .list-group > .list-group-item {
     user-select: none;
     cursor: pointer;
 }
@@ -104,19 +104,19 @@
 }
 
 
-.add-on .input-group-btn > .btn {
+.search-icon-btn > .btn {
   border-left-width:0;left:-2px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* stop the glowing blue shadow */
-.add-on .form-control:focus {
+.form-control:focus {
     box-shadow:none;
     -webkit-box-shadow:none;
     border-color:#cccccc;
 }
 
-div.withError > .searchable-scrollable-list > .panel-group > .panel {
+div.withError > .searchable-scrollable-list > .card {
     border: 1px solid #F55753;
 }
 
@@ -128,6 +128,4 @@ div.withError > div.input-group > input.narrow-down-list {
     padding-left: 85px;
 }
 
-.input-group-btn.search-icon-btn {
-    width: 1% !important;
-}
+

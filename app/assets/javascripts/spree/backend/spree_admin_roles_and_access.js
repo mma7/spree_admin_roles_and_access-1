@@ -3,9 +3,9 @@
 var SearchableList = (function() {
   var SearchableCheckboxList = function(container) {
     this.$searchBox = $("<div class='input-group input-group-lg col-xs-12'>\
-                           <input type='text' placeholder='Search..' class='narrow-down-list form-control'></input>\
-                            <div class='input-group-btn search-icon-btn'>\
-                              <button class='btn btn-default' type='submit'><i class='glyphicon glyphicon-search'></i></button>\
+                            <input type='text' placeholder='Search..' class='narrow-down-list form-control'></input>\
+                            <div class='search-icon-btn input-group-append'>\
+                              <button class='btn btn-outline-secondary' type='button'><i class='glyphicon glyphicon-search'></i></button>\
                             </div>\
                          </div>");
     this.$container = container;
@@ -33,7 +33,7 @@ var SearchableList = (function() {
       var total        = lg.find('.list-group-item').length;
       var totalChecked = lg.find('input:checked').length;
       lgItem.toggleClass('list-group-item-success');
-      checkbox.parents('.panel').find('.count').text(totalChecked + '/' + total);
+      checkbox.parents('.card').find('.count').text(' ' + totalChecked + '/' + total);
     });
   };
 
