@@ -1,5 +1,5 @@
 module Spree
-  class PermissionSet < ActiveRecord::Base
+  class PermissionSet < Spree::Base
     has_many :permissions_permission_sets, dependent: :destroy
     has_many :permissions, through: :permissions_permission_sets
     has_many :roles_permission_sets, dependent: :destroy

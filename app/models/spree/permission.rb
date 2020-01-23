@@ -1,5 +1,5 @@
 module Spree
-  class Permission < ActiveRecord::Base
+  class Permission < Spree::Base
     include Permissions
 
     default_scope { order(:priority) }
