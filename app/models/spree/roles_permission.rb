@@ -1,5 +1,5 @@
 module Spree
-  class RolesPermission < ActiveRecord::Base
+  class RolesPermission < Spree::Base
 
   end
 end
