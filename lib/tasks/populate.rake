@@ -128,8 +128,9 @@ namespace :spree_roles do
     desc "Create admin username and password"
     task populate: :environment do
       default_permission = make_permission('default-permissions', 0)
+      read_variant_permission = make_permission('can-read-spree/variants', 0)
       default_permission_set = make_permission_set(
-        [default_permission],
+        [default_permission, read_variant_permission],
         'default',
         'Permission for general users including the customers, Note: *users without this permission cannot checkout*'
       )
