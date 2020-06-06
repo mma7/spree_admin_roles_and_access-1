@@ -32,9 +32,8 @@ module Spree
         !order.completed? && (order.user == user || order&.token == token)
       end
 
-      current_ability.can :read, Spree::Address do |address|
-        address.user == user
-      end
+      current_ability.can [:manage], Spree::Address, { user_id: user.id }
+      
       current_ability.can [:read], Spree::State
       current_ability.can [:read], Spree::Country
     end
